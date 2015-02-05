@@ -1,3 +1,5 @@
-sudo apt-get update
-sudo apt-get install build-essential libssl-dev libxml2-dev libxslt1-dev libbz2-dev zlib1g-dev -y
-sudo apt-get install python-dev python-setuptools python-virtualenv libjpeg62-dev wv poppler-utils -y
+#!/bin/bash
+curl https://raw.githubusercontent.com/mitsuhiko/pipsi/master/get-pipsi.py | python
+echo "export PATH=~/.local/bin:$PATH" >> $HOME/.bashrc 
+$HOME/.local/bin/pipsi install for-beginner-piano
+~/.local/venvs/for-beginner-piano/bin/pip install -U setuptools
